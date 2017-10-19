@@ -9,9 +9,9 @@ So how can we estimate properties of these graphs?
 
 We use __random walks__. Specifically we choose some node to start from, set off on a random walk, and see how long it takes until we return to that node.
 
+<img width="500" alt="portfolio_view" src="rand_walk_visual_1.png">
 
-
-_graph of the algorithm figuring out how many edges exist in a massive graph_
+_graph of the algorithm figuring out how many edges exist in a massive graph, x axis shows subsquent returns of the random walk_
 
 ## An analogy
 
