@@ -17,6 +17,8 @@ _graph of the algorithm figuring out how many edges exist in a massive graph, x 
 
 Imagine you're dropped into a city. You have no idea where you are, no map, and your task is to estimate how many junctions there are in the entire city. You mark your start point so you will know when you return to it, and you set off for a walk. Every time you reach a junction, you flip a coin to decide which direction to follow. Eventually, after some time, you will return to the point you started. Great. Now repeat this many times. And some more. Average those results. Now you reason that the larger a city you're in, the longer the time before returns. So now you just have to figure out the math linking the two things... Or read from people who've already figured it out (see papers).
 
+<img width="500" src="city_aerial_01.jpg">
+
 ## Papers
 
 C. Cooper, T. Radzik, and Y. Siantos, “Fast Low-Cost Estimation of Network Properties Using Random Walks,” Internet Math., vol. 12, no. March, pp. 221–238, 2016.
