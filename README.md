@@ -1,7 +1,8 @@
 # Estimating graph properties with random walks
 
 ## Intro
-Counting the number of nodes and edges of a graph is easy right? You just use a package like [NetworkX](https://networkx.github.io/documentation/networkx-1.10/reference/functions.html) and type in 'number_of_nodes(G)'.
+
+Counting the number of nodes and edges of a graph is easy right? You just use an API like [NetworkX](https://networkx.github.io/documentation/networkx-1.10/reference/functions.html) and type in 'number_of_nodes(G)'.
 
 Well. Yes, normally. But what about when you can't. What if the graph in question is the entire world wide web, or all videos on youtube. The data may be so large they are not available on any single centralised server, and we might have only partial access to it - we can only view the currenty node that we're on (e.g. the hyperlinks of the current webpage - you need to move to the next webpage before you know which hyperlinks it contains).
 
@@ -11,14 +12,18 @@ We use __random walks__. Specifically we choose some node to start from, set off
 
 <img width="500" alt="portfolio_view" src="rand_walk_visual_1.png">
 
-_graph of the algorithm figuring out how many edges exist in a massive graph, x axis shows subsquent returns of the random walk_
+_Progress of the algorithm figuring out how many edges exist in a massive graph (y axis), x axis shows subsquent returns of the random walk. The graph used is a portion of the www as it existed in 2002 ([https://snap.stanford.edu/data/web-Google.html](https://snap.stanford.edu/data/web-Google.html))._
+
+
 
 
 ## An analogy
 
 <img width="500" src="city_aerial_01.jpg">
 
-Imagine you're dropped into a city. You have no idea where you are, no map, and your task is to estimate how many junctions there are in the entire city. You mark your start point so you will know when you return to it, and you set off for a walk. Every time you reach a junction, you flip a coin to decide which direction to follow. Eventually, after some time, you will return to the point you started. Great. Now repeat this many times. And some more. Average those results. Now you reason that the larger a city you're in, the longer the time before returns. So now you just have to figure out the math linking the two things...
+Imagine you're dropped into a city. You have no idea where you are, no map, and your task is to estimate how many junctions there are in the entire city. You mark your start point so you will know when you return to it, and you set off for a walk. Every time you reach a junction, you flip a coin to decide which direction to follow. Eventually, after some time, you will return to the point you started. Great. Now repeat this many times. And some more. Average those results. Now you reason that the larger a city you're in, the longer the time before returns. 
+
+So now you just have to figure out an efficient way to sample return times, and the math linking the two things...
 
 
 ## Papers
